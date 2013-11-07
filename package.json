@@ -1,0 +1,30 @@
+{
+  "name": "reqall",
+  "version": "0.0.1",
+  "description": "require multiple files in node",
+  "main": "index.js",
+  "keywords": [
+    "require",
+    "multiple",
+    "files"
+  ],
+  "homepage": "https://github.com/b3ngr33ni3r/reqall",
+  "author": {
+    "name": "Ben Greenier",
+    "email": "ben+npm@bengreenier.com",
+    "homepage": "bengreenier.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b3ngr33ni3r/reqall.git"
+  },
+  "bugs": {
+    "url": "https://github.com/b3ngr33ni3r/reqall/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/b3ngr33ni3r/reqall/blob/master/LICENSE"
+    }
+  ]
+}
