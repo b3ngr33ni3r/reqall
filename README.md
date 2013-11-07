@@ -2,11 +2,22 @@ reqall
 ======
 
 require multiple files in node
+## Why?
+
+Mostly 'cause I'm really lazy. __reqall__ allows you to load modules at
+runtime, based on scanning the filesystem. This means you have to write
+less `require` code, though it _also_ means your application will be slower,
+at initial launch (I think that's the only performance hit).
+
+For instance, [critic](https://github.com/b3ngr33ni3r/critic) uses this to
+`require` each model file, since they're each in their own `.js` file. This
+way I can add models without changing ANY code. Also, the `models` directory
+`index.js` file is one line (`module.exports = require('reqall')();`) so thats...fun.
 
 ## How?
 
 ```
-var modules = require('reqall')()
+var modules = require('reqall')();
 ```
 
 will load __all__ the `.js` files in the directory into an object. If we had
@@ -31,7 +42,7 @@ You can also specify module names, and only those modules will be loaded. This u
 you'd need to call `reqall('./file','./file2')`. 
 
 ```
-var modules = require('reqall')('request','./mylib','flatiron')
+var modules = require('reqall')('request','./mylib','flatiron');
 ```
 
 would work just fine, assuming you've got `request` and `flatiron` installed
