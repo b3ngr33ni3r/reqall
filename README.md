@@ -61,7 +61,7 @@ from npm.
 you can't access the calling script via the returned object. ie, if i call `reqall` from
 a script `index.js` then there will be no `index` property in the object. this is a node
 limitation (well technically this could work in node sometimes, but I've disabled it for sure),
-but also why would you ever want to do that.
+but also why would you ever want to do that (it'd be like a circular reference).
 
 
 ## Moar
